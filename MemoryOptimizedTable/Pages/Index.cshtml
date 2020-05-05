@@ -1,0 +1,14 @@
+﻿@page
+@model IndexModel
+@inject ApplicationDbContext context
+
+@{
+    ViewData["Title"] = "Home page";
+}
+
+
+@foreach(var item in context.Tests)
+{
+    @item.Id
+    @item.Name
+}
